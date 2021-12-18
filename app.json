@@ -1,0 +1,8 @@
+{
+	"name": "baye-book-seller",
+	"buildpacks": [
+		{
+			"url": "heroku/gradle"
+		}
+	]		
+}
