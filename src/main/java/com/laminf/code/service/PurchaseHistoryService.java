@@ -31,7 +31,7 @@ public class PurchaseHistoryService implements IPurchaseHistoryService {
 	
 	@Override
 	public List<IPurchaseItem> findPurchasedItemsOfUser(Long userId){
-		return purchaseRepository.findAllPurchasesOfUsers(userId);
+		return purchaseRepository.findAllPurchasesOfUser(userId);
 	}
 	
 	// ================================================================================= //

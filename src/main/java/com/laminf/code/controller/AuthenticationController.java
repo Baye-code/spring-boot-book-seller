@@ -3,6 +3,7 @@ package com.laminf.code.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,6 +25,7 @@ public class AuthenticationController {
 	
 	// =============================================================================================================	
 	
+	//@CrossOrigin("http://localhost:4200")
 	@PostMapping("/sign-up")
 	public ResponseEntity<User> signUp(@RequestBody User user){
 		
@@ -36,6 +38,7 @@ public class AuthenticationController {
 	
 	// =============================================================================================================	
 	
+	//@CrossOrigin("http://localhost:4200")
 	@PostMapping("/sign-in")
 	public ResponseEntity<?> signIn(@RequestBody User user){
 		

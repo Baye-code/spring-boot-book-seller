@@ -9,6 +9,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 @SpringBootApplication
 @PropertySource("classpath:application-${spring.profiles.active:default}.properties")
+//@PropertySource("classpath:application-${spring.profiles.active:prod}.properties")
 public class BookSellerApplication {
 
 	public static void main(String[] args) {

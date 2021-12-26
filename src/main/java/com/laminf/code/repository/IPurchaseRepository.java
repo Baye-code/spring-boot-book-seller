@@ -11,10 +11,10 @@ import com.laminf.code.repository.projection.IPurchaseItem;
 
 public interface IPurchaseRepository extends JpaRepository<PurchaseHistory, Long> {
 	
-	@Query("select " +
-		   "b.title as title, ph.price as price, ph.purchaseTime as purchaseTime " +
-		   "from PurchaseHistory ph left join Book b on b.id = ph.bookId " +
-		   "where ph.userId = :userId")
-	List<IPurchaseItem> findAllPurchasesOfUsers(@Param("userId") long userId);
+    @Query("select " +
+            "b.title as title, ph.price as price, ph.purchaseTime as purchaseTime  " +
+            "from PurchaseHistory ph left join Book b on b.id = ph.bookId " +
+            "where ph.userId = :userId")
+    List<IPurchaseItem> findAllPurchasesOfUser(@Param("userId") Long userId);
 
 }
